@@ -1,0 +1,35 @@
+{
+  "name": "pkg-nextjs",
+  "version": "1.0.0",
+  "bin": "server.js",
+  "scripts": {
+    "clean": "rm -rf build dist node_modules package-lock.json",
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "next": "next build",
+    "ncc": "npx ncc build server.js",
+    "pkg": "pkg ."
+  },
+  "dependencies": {
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.32.0",
+    "pkg": "5.4.1"
+  },
+  "pkg": {
+    "assets": [
+      "build/**/*",
+      "public/*"
+    ],
+    "scripts": [
+      "build/**/*.js"
+    ],
+    "targets": [
+      "node12-macos-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
