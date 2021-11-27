@@ -35,6 +35,8 @@ Server running at http://127.0.0.1:3000/
 
 ## pkg
 
+pkg packages a Node.js app into a single binary that can be run without having to install Node.js.
+
 ```sh
 # run pkg against server.js file
 $ npm run pkg
@@ -50,7 +52,6 @@ $ npm run pkg
 $ ./dist-pkg/ncc-pkg-examples
 Server running at http://127.0.0.1:3000/
 
-# can also be run against ncc's output
-$ npm run ncc
+# can also be run against ncc's output (produces a slightly larger binary)
 $ npx pkg dist-ncc/index.js -t node16-macos-x64 -o dist-pkg/server
 ```
