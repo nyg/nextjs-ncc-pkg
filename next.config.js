@@ -1,3 +1,6 @@
 module.exports = {
-  distDir: 'dist-next'
+  swcMinify: true,
+  experimental: {
+      outputStandalone: true
+  }
 }
